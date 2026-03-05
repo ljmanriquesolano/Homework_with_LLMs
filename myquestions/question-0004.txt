@@ -1,0 +1,7 @@
+Escribe una función llamada escalar_dataframe(df)
+que reciba un DataFrame de pandas con columnas numéricas.
+
+La función debe usar StandardScaler de sklearn para escalar
+las columnas de modo que tengan media 0 y desviación estándar 1.
+
+La función debe devolver un array de numpy con los datos escalados.

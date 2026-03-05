@@ -1,0 +1,15 @@
+El Reto: Clasificador de Flores Iris
+
+Escribe una función en Python llamada entrenar_clasificador_iris que realice los siguientes pasos:
+
+1. Cargue el dataset Iris usando sklearn.datasets.load_iris.
+
+2. Cree un DataFrame de pandas con las características (features) y una serie para el objetivo (target).
+
+3. Divida los datos en conjuntos de entrenamiento (80%) y prueba (20%) usando random_state=42.
+
+4. Escale las características utilizando StandardScaler.
+
+5. Entrene un modelo de Regresión Logística.
+
+6. Calcule y devuelva la precisión (accuracy) del modelo en el conjunto de prueba.

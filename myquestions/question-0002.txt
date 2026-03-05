@@ -1,0 +1,5 @@
+Escribe una función llamada calcular_media_columna(df, columna)
+que reciba un DataFrame de pandas y el nombre de una columna numérica.
+
+La función debe devolver la media de los valores de esa columna
+ignorando valores NaN.

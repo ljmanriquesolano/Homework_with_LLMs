@@ -1,0 +1,5 @@
+Escribe una función llamada contar_valores_unicos(df, columna)
+que reciba un DataFrame de pandas y el nombre de una columna.
+
+La función debe devolver el número de valores únicos presentes
+en esa columna.
