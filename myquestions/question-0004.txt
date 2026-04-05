@@ -1,7 +1,21 @@
-Escribe una función llamada escalar_dataframe(df)
-que reciba un DataFrame de pandas con columnas numéricas.
+El Reto: Predictor de Calidad de Préstamos
 
-La función debe usar StandardScaler de sklearn para escalar
-las columnas de modo que tengan media 0 y desviación estándar 1.
+Imagina que trabajas para una Fintech. Tu misión es crear una función que reciba un **DataFrame** con datos de clientes y devuelva un modelo entrenado para predecir si un préstamo será aprobado o no, pero con una restricción: debes automatizar la limpieza y el escalado dentro de la misma función.
 
-La función debe devolver un array de numpy con los datos escalados.
+### El Problema
+
+Escribe una función llamada `entrenar_modelo_prestamos` que realice lo siguiente:
+
+1. **Limpieza:** Rellene los valores nulos en columnas numéricas con la **mediana** y en columnas categóricas con la **moda**.
+  
+2. **Ingeniería de Características:** Cree una nueva columna llamada `Cuota_Ingreso` que sea el resultado de dividir `Monto_Prestamo` entre `Ingresos_Mensuales`.
+  
+3. **Preprocesamiento:**
+  
+  - Escale las variables numéricas usando `StandardScaler`.
+    
+  - Codifique las variables categóricas usando `OneHotEncoder`.
+    
+4. **Modelado:** Entrene un modelo de **Random Forest** para predecir la columna `Estado_Prestamo`.
+  
+5. **Retorno:** La función debe devolver una tupla con: `(modelo_entrenado, accuracy_score, dataframe_procesado)`.
