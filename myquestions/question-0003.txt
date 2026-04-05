@@ -1,5 +1,28 @@
-Escribe una función llamada contar_valores_unicos(df, columna)
-que reciba un DataFrame de pandas y el nombre de una columna.
+El Reto
 
-La función debe devolver el número de valores únicos presentes
-en esa columna.
+Debes escribir una función llamada `entrenar_y_predecir` que realice las siguientes tareas:
+
+1. **Limpieza:** Elimine filas con valores nulos en el DataFrame.
+  
+2. **Transformación:** Convierta una columna categórica ("Plan") en variables numéricas (dummies/one-hot encoding).
+  
+3. **Modelado:** Divida los datos en entrenamiento y prueba (80/20).
+  
+4. **Entrenamiento:** Entrene un modelo de **Regresión Logística** usando `sklearn`.
+  
+5. **Evaluación:** Devuelva la precisión (*accuracy score*) del modelo en el conjunto de prueba.
+  
+
+### Estructura de los Datos
+
+Imagina que recibes un DataFrame de `pandas` con estas columnas:
+
+- `Edad`: Int
+  
+- `Mensualidad`: Float
+  
+- `Meses_Contrato`: Int
+  
+- `Plan`: String ('Básico', 'Premium')
+  
+- `Churn`: Int (0 = Se queda, 1 = Se va) -> **Esta es nuestra etiqueta (target)**
