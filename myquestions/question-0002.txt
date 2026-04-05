@@ -1,5 +1,21 @@
-Escribe una función llamada calcular_media_columna(df, columna)
-que reciba un DataFrame de pandas y el nombre de una columna numérica.
+El Reto: Predicción de Precios de Vivienda con Regularización
 
-La función debe devolver la media de los valores de esa columna
-ignorando valores NaN.
+**Contexto:**
+
+Imagina que tienes un DataFrame de pandas con información sobre viviendas. Tu objetivo es crear una función que prepare los datos y entrene un modelo de **Regresión Ridge** para predecir el precio, asegurándote de que las variables numéricas estén escaladas.
+
+**Instrucciones:**
+
+Escribe una función llamada `entrenar_modelo_viviendas` que realice lo siguiente:
+
+1. Reciba como parámetros un DataFrame `df` y el nombre de la columna objetivo `target` (ej. 'precio').
+  
+2. Separe las características ($X$) del objetivo ($y$).
+  
+3. Divida los datos en conjuntos de entrenamiento (80%) y prueba (20%) usando un `random_state=42`.
+  
+4. Utilice un `StandardScaler` de **sklearn** para normalizar las características.
+  
+5. Entrene un modelo de `Ridge` (regresión lineal con regularización $L2$).
+  
+6. Calcule y retorne el **Error Cuadrático Medio (MSE)** obtenido en el conjunto de prueba y el objeto del modelo entrenado.
