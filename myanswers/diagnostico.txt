@@ -1,0 +1,25 @@
+La pregunta 0298 presenta inconsistencias entre el enunciado y el generador de casos de uso.
+
+El enunciado solicita implementar una función llamada
+segmentar_clientes_kmeans(datos, num_clusters)
+que debe devolver una tupla:
+(labels, centroids)
+usando K-Means.
+
+Sin embargo, el generador:
+- no llama dicha función,
+- no genera inputs compatibles,
+- no calcula K-Means,
+- no produce centroides,
+- y retorna un DataFrame con etiquetas aleatorias.
+
+Además, el generador define la función:
+generar_caso_de_uso_segmentacion_clientes
+en lugar de seguir la convención requerida por el enunciado.
+
+Por tanto, no existe una correspondencia válida entre:
+- especificación del problema,
+- inputs generados,
+- y outputs esperados.
+
+La solución implementada sigue fielmente el enunciado original.
