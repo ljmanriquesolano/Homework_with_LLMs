@@ -1,25 +1,16 @@
-La pregunta 0298 presenta inconsistencias entre el enunciado y el generador de casos de uso.
+Se encuentra problermas cpn la pregunta 0298: 
 
-El enunciado solicita implementar una función llamada
-segmentar_clientes_kmeans(datos, num_clusters)
-que debe devolver una tupla:
-(labels, centroids)
-usando K-Means.
+El archivo question-0002.txt solicita impleentar una función `segmentar_clientes_kmeans(datos, num_clusters)` que debe devolver 
+`(labels, centroids)` utilizando K-Means; Sin embargo, el archivo `question-0002-usecase-generator.py` presenta inconsistencias con el enunciado y con el formato esperado por el validador.
 
-Sin embargo, el generador:
-- no llama dicha función,
-- no genera inputs compatibles,
-- no calcula K-Means,
-- no produce centroides,
-- y retorna un DataFrame con etiquetas aleatorias.
+El generador:
 
-Además, el generador define la función:
-generar_caso_de_uso_segmentacion_clientes
-en lugar de seguir la convención requerida por el enunciado.
+- no construye explícitamente pares
+  (input_data, output_data),
+- no utiliza sklearn.cluster.KMeans,
+- no calcula centroides,
+- y genera etiquetas aleatorias independientes de los datos.
 
-Por tanto, no existe una correspondencia válida entre:
-- especificación del problema,
-- inputs generados,
-- y outputs esperados.
+A demás, retorna `(info, resultado)` donde resultado es un DataFrame con una columna "Cluster", en lugar de retornar la salida esperada de la función `(labels, centroids)`.
 
-La solución implementada sigue fielmente el enunciado original.
+El notebook validador clasifica este caso como "usecase generator error". Personalmente creo y confio en que la solución implementada sigue fielmente las especificaciones del enunciado original.
